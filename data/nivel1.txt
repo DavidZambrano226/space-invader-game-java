@@ -1,0 +1,14 @@
+nivel
+1
+filasEnemigo
+5
+columnaEnemigo
+10
+vidaEnemigos
+1
+cantidadEnemigos
+50
+velocidadEnemigos
+5
+posXPrimerEnemigo posYPrimerEnemigo anchoEnemigos altoEnemigos
+40	40	12	32

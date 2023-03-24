@@ -1,0 +1,1 @@
+1	Checking	Code	Test	13,2	 	Se genera un error cuando el usuario intenta buscar un nombre que no existe, le da cancelar o le da en aceptar al cuadro de diálogo cuando este está con datos vacíos. Es un error de VERIFICACIÓN de los datos, se procedió a manejar este error para verificar que el manejo de los datos se de correctamente	@1490411262283	

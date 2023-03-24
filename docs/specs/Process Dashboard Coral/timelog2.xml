@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<timeLogEntries>
+  <time path="/ProyectoFinal_Quintero/PSP0&#10;/ProyectoFinal_Coral/PSP0" flag="R" />
+  <time path="/ProyectoFinal_Quintero&#10;/ProyectoFinal_Coral" flag="R" />
+  <time id="144" flag="D" />
+  <time id="145" path="/ProyectoFinal_Coral/PSP0/Postmortem" start="@1495520083000" delta="28" flag="A" />
+  <time id="146" path="/ProyectoFinal_Coral/PSP0/Test" start="@1495553096000" delta="218" flag="A" />
+</timeLogEntries>

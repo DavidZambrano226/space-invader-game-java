@@ -1,0 +1,26 @@
+Process Dashboard - logging started at Tue May 23 10:45:34 COT 2017
+Oracle Corporation JRE 1.8.0_131; Windows 10
+Using LocalWorkingDirectory[C:\pspdata]
+2017-05-23 10:45:34.389:INFO:oejs.Server:jetty-8.y.z-SNAPSHOT
+2017-05-23 10:45:34.473:INFO:oejs.AbstractConnector:Started LocalConnector@0.0.0.0:0
+2017-05-23 10:46:10.431:INFO:oejs.AbstractConnector:Started SelectChannelConnector@127.0.0.1:2468
+Created default translation engine.
+*************** FILE 29.dat APPEARS TO BE CORRUPT *****************
+Saved C:\pspdata\35.dat
+Saved C:\pspdata\35.dat
+Saved C:\pspdata\35.dat
+Saved C:\pspdata\35.dat
+Saved C:\pspdata\35.dat
+Saved C:\pspdata\35.dat
+Saved C:\pspdata\35.dat
+Saved C:\pspdata\35.dat
+Saved C:\pspdata\35.dat
+Saved C:\pspdata\35.dat
+Saved C:\pspdata\35.dat
+Saved C:\pspdata\35.dat
+Saved C:\pspdata\35.dat
+Saved C:\pspdata\35.dat
+Saved C:\pspdata\35.dat
+Saved C:\pspdata\35.dat
+Saved C:\pspdata\35.dat
+Saved C:\pspdata\35.dat

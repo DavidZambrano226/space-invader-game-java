@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<defectLog>
+  <defect num="1" type="System" inj="Compile" rem="Compile" ft="5.1" fd="" desc="Pantallazo azul." date="@1487457900162" />
+</defectLog>

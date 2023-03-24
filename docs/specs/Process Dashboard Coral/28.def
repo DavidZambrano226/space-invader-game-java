@@ -1,0 +1,2 @@
+1	Data	Design	Code	34,8	 	Se presenta un errror al agregar una prenda con código menor y al agregar más de dos prendas. El error se solucionó, había inconsistencia en algunas instrucciones.	@1492832716777	
+2	Data	Design	Code	2,3	 	No elimina un elemento cuando este queda como primero y único, el probelam se soluciona agregando unas condiciones al método eliminar de la interfaz.	@1492873744727	

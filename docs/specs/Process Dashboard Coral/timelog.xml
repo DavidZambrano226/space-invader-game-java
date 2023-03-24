@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<timeLogEntries>
+  <time id="1" path="/U1L2/PSP0/Planning" start="@1485610940621" delta="88" />
+  <time id="2" path="/U1L2/PSP0/Design" start="@1485616193450" delta="267" />
+  <time id="3" path="/U1L2/PSP0/Design" start="@1485637614556" delta="180" />
+  <time id="4" path="/U1L2/PSP0/Code" start="@1485648426107" delta="186" />
+  <time id="5" path="/U1L2/PSP0/Code" start="@1485709933703" delta="11" />
+  <time id="6" path="/U1L2/PSP0/Compile" start="@1485710567000" delta="15" />
+  <time id="7" path="/U1L2/PSP0/Postmortem" start="@1485710696425" delta="2" />
+  <time id="8" path="/U1L2/PSP0/Test" start="@1485712250000" delta="15" />
+  <time id="9" path="/U1L3/PSP0/Planning" start="@1486218640805" delta="49" />
+  <time id="10" path="/U1L3/PSP0/Design" start="@1486221571749" delta="142" />
+  <time id="11" path="/U1L3/PSP0/Design" start="@1486235730773" delta="2" />
+  <time id="12" path="/U1L3/PSP0/Code" start="@1486235845009" delta="90" />
+  <time id="14" path="/U1L3/PSP0/Compile" start="@1486241224000" delta="10" />
+  <time id="17" path="/U1L3/PSP0/Test" start="@1486241319000" delta="10" />
+  <time id="18" path="/U1L3/PSP0/Postmortem" start="@1486242003000" delta="5" />
+  <time id="19" path="/U2L1/PSP0/Planning" start="@1486743904048" delta="40" interrupt="3" />
+  <time id="20" path="/U2L1/PSP0/Design" start="@1486747127654" delta="33" />
+  <time id="21" path="/U2L1/PSP0/Design" start="@1486767493420" delta="8" />
+  <time id="22" path="/U2L1/PSP0/Design" start="@1486768799266" delta="26" />
+  <time id="23" path="/U2L1/PSP0/Design" start="@1486772014992" delta="48" />
+  <time id="24" path="/U2L1/PSP0/Design" start="@1486911646000" delta="60" />
+  <time id="26" path="/U2L1/PSP0/Design" start="@1486916713814" delta="10" />
+  <time id="27" path="/U2L1/PSP0/Design" start="@1486918777995" delta="341" interrupt="10" />
+  <time id="28" path="/U2L1/PSP0/Code" start="@1486904418000" delta="490" />
+  <time id="30" path="/U2L1/PSP0/Compile" start="@1486940175814" delta="5" />
+  <time id="31" path="/U2L1/PSP0/Test" start="@1486940454858" delta="21" />
+  <time id="32" path="/U2L2/PSP0/Planning" start="@1487253740000" delta="16" interrupt="4" />
+  <time id="33" path="/U2L2/PSP0/Planning" start="@1487255516404" delta="13" />
+  <time id="34" path="/U2L2/PSP0/Planning" start="@1487287692000" delta="6" />
+  <time id="35" path="/U2L2/PSP0/Design" start="@1487336695000" delta="50" />
+  <time id="36" path="/U2L2/PSP0/Design" start="@1487382086000" delta="98" />
+  <time id="34" path="/U2L2/PSP0/Planning" start="@1487287692000" delta="3" />
+  <time id="35" path="/U2L2/PSP0/Design" start="@1487336695000" delta="25" />
+  <time id="36" path="/U2L2/PSP0/Design" start="@1487382086000" delta="49" />
+  <time id="37" path="/U2L2/PSP0/Code" start="@1487435776000" delta="180" />
+  <time id="39" path="/U2L2/PSP0/Design" start="@1487429011000" delta="60" />
+  <time id="41" path="/U2L2/PSP0/Compile" start="@1487457871975" delta="5" />
+  <time id="42" path="/U2L2/PSP0/Test" start="@1487458170265" delta="13" />
+  <time id="43" path="/U3L1/PSP0/Planning" start="@1488463807000" delta="27" />
+  <time id="45" path="/U3L1/PSP0/Code" start="@1488506551000" delta="85" />
+  <time id="46" path="/U3L1/PSP0/Design" start="@1488465045000" delta="22" />
+  <time id="47" path="/U3L1/PSP0/Design" start="@1488503685000" delta="30" />
+  <time id="48" path="/U3L1/PSP0/Code" start="@1488558340000" delta="60" />
+  <time id="49" path="/U3L1/PSP0/Code" start="@1488551143000" delta="120" />
+  <time id="50" path="/U3L1/PSP0/Compile" start="@1488643036672" delta="3" />
+  <time id="51" path="/U3L1/PSP0/Test" start="@1488643192839" delta="4" />
+  <time id="52" path="/U3L2/PSP0/Planning" start="@1489067599675" delta="26" />
+  <time id="53" path="/U3L2/PSP0/Design" start="@1489069163490" delta="178" interrupt="10" />
+  <time id="54" path="/U3L2/PSP0/Design" start="@1489111143790" delta="39" />
+  <time id="55" path="/U3L2/PSP0/Code" start="@1489113466794" delta="18" />
+  <time id="56" path="/U3L2/PSP0/Code" start="@1489160220000" delta="94" />
+  <time id="57" path="/U3L2/PSP0/Compile" start="@1489165786614" delta="8" />
+  <time id="58" path="/U3L2/PSP0/Test" start="@1489166248346" delta="11" />
+  <time id="59" path="/U3L2/PSP0/Postmortem" start="@1489166932469" delta="2" />
+  <time id="60" path="/U4L1/PSP0/Planning" start="@1489672057379" delta="26" />
+  <time id="61" path="/U4L1/PSP0/Design" start="@1489673648006" delta="37" />
+  <time id="62" path="/U4L1/PSP0/Design" start="@1489762487605" delta="781" />
+  <time id="63" path="/U4L1/PSP0/Design" start="@1489847414000" delta="134" />
+  <time id="64" path="/U4L1/PSP0/Design" start="@1489870612628" delta="42" />
+  <time id="65" path="/U4L1/PSP0/Design" start="@1489874385416" delta="36" />
+  <time id="66" path="/U4L1/PSP0/Design" start="@1489879565012" delta="1" />
+  <time id="67" path="/U4L1/PSP0/Code" start="@1489879630697" delta="2" />
+  <time id="68" path="/U4L1/PSP0/Code" start="@1489882053791" delta="136" />
+  <time id="69" path="/U4L1/PSP0/Compile" start="@1489890242700" delta="1" />
+  <time id="70" path="/U4L1/PSP0/Test" start="@1489890372301" delta="15" />
+  <time id="73" path="/U4L1/PSP0/Postmortem" start="@1489891836000" delta="5" />
+  <time id="62" path="/U4L1/PSP0/Design" start="@1489762487605" delta="691" />
+  <time id="74" path="/U4L2/PSP0/Planning" start="@1490279320000" delta="35" />
+  <time id="75" path="/U4L2/PSP0/Design" start="@1490310126000" delta="46" />
+  <time id="76" path="/U4L2/PSP0/Design" start="@1490313929000" delta="35" />
+  <time id="77" path="/U4L2/PSP0/Design" start="@1490317423000" delta="32" />
+  <time id="78" path="/U4L2/PSP0/Design" start="@1490323382000" delta="43" />
+  <time id="79" path="/U4L2/PSP0/Design" start="@1490331089000" delta="27" />
+  <time id="80" path="/U4L2/PSP0/Code" start="@1490372767000" delta="88" />
+  <time id="81" path="/U4L2/PSP0/Code" start="@1490394023000" delta="20" />
+  <time id="82" path="/U4L2/PSP0/Compile" start="@1490410683603" delta="3" />
+  <time id="83" path="/U4L2/PSP0/Test" start="@1490410865875" delta="20" />
+  <time id="84" path="/U5L1/PSP0/Planning" start="@1491487398000" delta="4" interrupt="3" />
+  <time id="85" path="/U5L1/PSP0/Planning" start="@1491488712817" delta="11" />
+  <time id="88" path="/U5L1/PSP0/Design" start="@1491527001000" delta="52" />
+  <time id="87" path="/U5L1/PSP0/Design" start="@1491533168000" delta="10" />
+  <time id="89" path="/U5L1/PSP0/Code" start="@1491530386085" delta="45" />
+  <time id="90" path="/U5L1/PSP0/Compile" start="@1491533093960" delta="1" />
+  <time id="91" path="/U5L1/PSP0/Test" start="@1491533181467" delta="5" />
+  <time id="92" path="/U5L1/PSP0/Postmortem" start="@1491533494527" delta="2" />
+  <time id="93" path="/U5L2/PSP0/Planning" start="@1492813354489" delta="16" />
+  <time id="94" path="/U5L2/PSP0/Design" start="@1492814301974" delta="69" interrupt="4" />
+  <time id="95" path="/U5L2/PSP0/Design" start="@1492819720710" delta="44" />
+  <time id="96" path="/U5L2/PSP0/Code" start="@1492823113184" delta="38" />
+  <time id="97" path="/U5L2/PSP0/Code" start="@1492833394217" delta="24" />
+  <time id="98" path="/U5L2/PSP0/Code" start="@1492870535624" delta="56" />
+  <time id="99" path="/U5L2/PSP0/Design" start="@1492787525000" delta="60" />
+  <time id="100" path="/U5L2/PSP0/Compile" start="@1492873919456" delta="5" />
+  <time id="101" path="/U5L2/PSP0/Test" start="@1492874193994" delta="8" />
+  <time id="102" path="/U5L2/PSP0/Postmortem" start="@1492874699320" delta="2" />
+  <time id="103" path="/U6L1/PSP0/Planning" start="@1493303405866" delta="29" />
+  <time id="104" path="/U6L1/PSP0/Planning" start="@1493337612541" delta="1" />
+  <time id="105" path="/U6L1/PSP0/Design" start="@1493337696804" delta="39" />
+  <time id="106" path="/U6L1/PSP0/Design" start="@1493388588441" delta="83" />
+  <time id="107" path="/U6L1/PSP0/Design" start="@1493397307000" delta="11" />
+  <time id="108" path="/U6L1/PSP0/Code" start="@1493397981104" delta="4" />
+  <time id="109" path="/U6L1/PSP0/Code" start="@1493399189304" delta="32" />
+  <time id="110" path="/U6L1/PSP0/Code" start="@1493426414830" delta="35" />
+  <time id="111" path="/U6L1/PSP0/Code" start="@1493430024986" delta="76" />
+  <time id="112" path="/U6L1/PSP0/Design" start="@1493406786000" delta="60" />
+  <time id="113" path="/U6L1/PSP0/Compile" start="@1493582193311" delta="2" />
+  <time id="114" path="/U6L1/PSP0/Test" start="@1493582375438" delta="10" />
+  <time id="115" path="/U6L2/PSP0/Planning" start="@1493907020257" delta="38" />
+  <time id="116" path="/U6L2/PSP0/Planning" start="@1493909960007" delta="3" />
+  <time id="117" path="/U6L2/PSP0/Planning" start="@1493988080150" delta="21" />
+  <time id="118" path="/U6L2/PSP0/Design" start="@1494001531630" delta="81" interrupt="7" />
+  <time id="119" path="/U6L2/PSP0/Design" start="@1494029392087" delta="16" />
+  <time id="120" path="/U6L2/PSP0/Design" start="@1494034766028" delta="44" />
+  <time id="121" path="/U6L2/PSP0/Design" start="@1494085508019" delta="32" />
+  <time id="122" path="/U6L2/PSP0/Design" start="@1494090513077" delta="2" />
+  <time id="123" path="/U6L2/PSP0/Design" start="@1494110918203" delta="40" />
+  <time id="124" path="/U6L2/PSP0/Design" start="@1494120722837" delta="99" />
+  <time id="125" path="/U6L2/PSP0/Code" start="@1494126668716" delta="83" />
+  <time id="126" path="/U6L2/PSP0/Compile" start="@1494131654100" delta="2" />
+  <time id="127" path="/U6L2/PSP0/Test" start="@1494131782384" delta="17" />
+  <time id="128" path="/U6L2/PSP0/Postmortem" start="@1494132783895" delta="1" />
+  <time id="129" path="/ProyectoFinal_Quintero/PSP0/Planning" start="@1494204887882" delta="65" interrupt="8" />
+  <time id="130" path="/ProyectoFinal_Quintero/PSP0/Design" start="@1494374120844" delta="102" interrupt="6" />
+  <time id="131" path="/ProyectoFinal_Quintero/PSP0/Design" start="@1494445677936" delta="84" />
+  <time id="132" path="/ProyectoFinal_Quintero/PSP0/Design" start="@1494514024976" delta="11" />
+  <time id="133" path="/ProyectoFinal_Quintero/PSP0/Design" start="@1494606395000" delta="72" interrupt="10" />
+  <time id="134" path="/ProyectoFinal_Quintero/PSP0/Design" start="@1494642728000" delta="146" />
+  <time id="135" path="/ProyectoFinal_Quintero/PSP0/Design" start="@1494738587211" delta="49" />
+  <time id="136" path="/ProyectoFinal_Quintero/PSP0/Design" start="@1494987113075" delta="154" />
+  <time id="137" path="/ProyectoFinal_Quintero/PSP0/Design" start="@1495031442000" delta="505" />
+  <time id="138" path="/ProyectoFinal_Quintero/PSP0/Design" start="@1495116923000" delta="120" />
+  <time id="139" path="/ProyectoFinal_Quintero/PSP0/Design" start="@1495229505000" delta="506" />
+  <time id="140" path="/ProyectoFinal_Quintero/PSP0/Code" start="@1495290760000" delta="758" />
+  <time id="141" path="/ProyectoFinal_Quintero/PSP0/Code" start="@1495403290000" delta="255" />
+  <time id="142" path="/ProyectoFinal_Quintero/PSP0/Code" start="@1495491346000" delta="371" />
+  <time id="143" path="/ProyectoFinal_Quintero/PSP0/Compile" start="@1495518309705" delta="9" />
+</timeLogEntries>
