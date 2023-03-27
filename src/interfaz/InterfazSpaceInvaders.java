@@ -25,7 +25,7 @@ import mundo.SpaceInvaders;
 public class InterfazSpaceInvaders extends JFrame {
 
 	/**
-	 * 
+	 * The class
 	 */
 	private static final long serialVersionUID = 1L;
 
