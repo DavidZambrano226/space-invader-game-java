@@ -12,8 +12,8 @@ import excepciones.PartidaYaExisteException;
 /**
  *
  * 
- * @author Manuel Alejandro Coral Lozano - Juan Sebastián Quintero Yoshioka
- *         Proyecto final - Algoritmos y programación II.
+ * @author Manuel Alejandro Coral Lozano - Juan Sebastiï¿½n Quintero Yoshioka
+ *         Proyecto final - Algoritmos y programaciï¿½n II.
  */
 public class Partida implements Serializable {
 
@@ -60,19 +60,26 @@ public class Partida implements Serializable {
 	// -----------------------------------------------------------------
 
 	/**
-	 * 
 	 * @param nombre
-	 * @param duracionNivel
 	 */
 	public Partida(String nombre) {
 		this.nombre = nombre;
-		nivel = new Nivel("1", 0, 0, 0, 0, 0, 0, 0);
+		nivel = new NivelBuilder()
+				.levelNumber(1)
+				.velocityOfEnemies(0)
+				.numberOfEnemies(0)
+				.numberOfEnemyLives(0)
+				.xPositionFirstEnemy(0)
+				.yPositionFirstEnemy(0)
+				.widthOfEnemies(0)
+				.heightOfEnemies(0)
+				.build();
 
 		//		inicializarEnemigos();
 	}
 
 	// -----------------------------------------------------------------
-	// -----------------------------Métodos-----------------------------
+	// -----------------------------Mï¿½todos-----------------------------
 	// -----------------------------------------------------------------
 
 	/**
@@ -255,9 +262,17 @@ public class Partida implements Serializable {
 		linea = br.readLine();
 		String[] arreglo = linea.split("\t");
 
-		this.nivel = new Nivel(nivelActual, velocidad, cantEnemigos,
-				vidaEnemigo, Integer.parseInt(arreglo[0]), Integer.parseInt(arreglo[1]),
-				Integer.parseInt(arreglo[2]), Integer.parseInt(arreglo[3]));
+
+		this.nivel = new NivelBuilder()
+				.levelNumber(Integer.parseInt(nivelActual))
+				.velocityOfEnemies(velocidad)
+				.numberOfEnemies(cantEnemigos)
+				.numberOfEnemyLives(vidaEnemigo)
+				.xPositionFirstEnemy(Integer.parseInt(arreglo[0]))
+				.yPositionFirstEnemy(Integer.parseInt(arreglo[1]))
+				.widthOfEnemies(Integer.parseInt(arreglo[2]))
+				.heightOfEnemies(Integer.parseInt(arreglo[3]))
+				.build();
 
 		inicializarEnemigos();
 
