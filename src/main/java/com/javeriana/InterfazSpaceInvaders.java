@@ -104,7 +104,7 @@ public class InterfazSpaceInvaders extends JFrame {
 	}
 
 	/**
-	 * 
+	 * cerrar method
 	 */
 	public void cerrar() {
 		try {
