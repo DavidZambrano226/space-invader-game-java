@@ -15,78 +15,44 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 /**
- * 
+ *
  * @author squin
  *
  */
 public class DialogoCrearJugador extends JDialog implements ActionListener {
 
+	private static DialogoCrearJugador instance;
 	// -----------------------------------------------------------------
 	// ---------------------------Constantes----------------------------
 	// -----------------------------------------------------------------
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
-
-	/***
-	 * 
-	 */
 	private final static String ACEPTAR = "Aceptar";
-
-	/**
-	 * 
-	 */
 	private final static String CANCELAR = "Cancelar";
 
 	// -----------------------------------------------------------------
 	// --------------------------Asociaciones---------------------------
 	// -----------------------------------------------------------------
 
-	/**
-	 * 
-	 */
-	InterfazSpaceInvaders interfaz;
+	private InterfazSpaceInvaders interfaz;
 
-	/**
-	 * 
-	 */
-	JPanel auxiliar;
+	private JPanel auxiliar;
 
 	// -----------------------------------------------------------------
 	// ----------------------------Atributos----------------------------
 	// -----------------------------------------------------------------
 
-	/**
-	 * 
-	 */
-	JLabel labNombre;
+	private JLabel labNombre;
 
-	/**
-	 * 
-	 */
-	JLabel labNickname;
+	private JLabel labNickname;
 
-	/**
-	 * 
-	 */
-	JTextField txtNombre;
+	private JTextField txtNombre;
 
-	/**
-	 * 
-	 */
-	JTextField txtNickame;
+	private JTextField txtNickame;
 
-	/**
-	 * 
-	 */
-	JButton butBotonAceptar;
+	private JButton butBotonAceptar;
 
-	/**
-	 * 
-	 */
-	JButton butBotonCancelar;
+	private JButton butBotonCancelar;
 
 	// -----------------------------------------------------------------
 	// ---------------------------Constructor---------------------------
@@ -95,10 +61,8 @@ public class DialogoCrearJugador extends JDialog implements ActionListener {
 	public DialogoCrearJugador(InterfazSpaceInvaders interfaz) {
 
 		super(interfaz, true);
-
 		this.interfaz = interfaz;
 		setLayout(null);
-
 		auxiliar = new JPanel();
 		auxiliar.setLayout(null);
 
@@ -159,45 +123,62 @@ public class DialogoCrearJugador extends JDialog implements ActionListener {
 		getRootPane().setBorder(BorderFactory.createLineBorder(Color.WHITE));
 	}
 
+	public static DialogoCrearJugador getInstance(InterfazSpaceInvaders interfaz) {
+		if (instance == null) {
+			instance = new DialogoCrearJugador(interfaz);
+		}
+		return instance;
+	}
+
 	// -----------------------------------------------------------------
 	// ----------------------Manejador de eventos-----------------------
 	// -----------------------------------------------------------------
 
 	/**
-	 * 
+	 *
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
-
 		String comando = e.getActionCommand();
-		if (comando.equals(CANCELAR)) {
-			this.dispose();
-		} else if (comando.equals(ACEPTAR)) {
-			if (txtNombre.getText().equals(null) || txtNombre.getText().equals("") || txtNickame.getText().equals(null)
-					|| txtNickame.getText().equals(""))
-				JOptionPane.showMessageDialog(this, "Por favor ingrese un nombre y un nickname válido",
-						"Error al crear el jugador", JOptionPane.ERROR_MESSAGE);
-
-			else if (txtNickame.getText().length() != 5) {
-				JOptionPane.showMessageDialog(this, "El nickname debe contener 5 caracteres",
-						"Error al asignar el nickname", JOptionPane.ERROR_MESSAGE);
-			} else {
-				interfaz.reqAgregarJugador(txtNombre.getText(), txtNickame.getText());
+		switch (comando) {
+			case CANCELAR:
 				this.dispose();
-			}
+				break;
+			case ACEPTAR:
+				if (isValidInput()) {
+					interfaz.reqAgregarJugador(txtNombre.getText(), txtNickame.getText());
+					this.dispose();
+				}
+				break;
 		}
 	}
+
+	private boolean isValidInput() {
+		String nombre = txtNombre.getText();
+		String nickname = txtNickame.getText();
+		if (nombre == null || nombre.trim().isEmpty() || nickname == null || nickname.trim().isEmpty()) {
+			JOptionPane.showMessageDialog(this, "Por favor ingrese un nombre y un nickname vÃ¡lido",
+					"Error al crear el jugador", JOptionPane.ERROR_MESSAGE);
+			return false;
+		} else if (nickname.length() != 5) {
+			JOptionPane.showMessageDialog(this, "El nickname debe contener 5 caracteres",
+					"Error al asignar el nickname", JOptionPane.ERROR_MESSAGE);
+			return false;
+		}
+		return true;
+	}
+
 	// Fin temporal
 	// -----------------------------------------------------------------
-	// -----------------------------Métodos-----------------------------
+	// -----------------------------Mï¿½todos-----------------------------
 	// -----------------------------------------------------------------
 
 	// -----------------------------------------------------------------
-	// -----------------------------Métodos-----------------------------
+	// -----------------------------Mï¿½todos-----------------------------
 	// -----------------------------------------------------------------
 
 	/**
-	 * 
+	 *
 	 */
 	public void mostrar() {
 		setSize(400, 400);

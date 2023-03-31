@@ -19,10 +19,10 @@ import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
 
 /**
- * Panel que contiene el menú principal del juego
- * 
- * @author Juan Sebastián Quintero Yoshioka - Manuel Alejandro Coral Lozano
- *         Proyecto final - Algoritmos y programación II
+ * Panel que contiene el menï¿½ principal del juego
+ *
+ * @author Juan Sebastiï¿½n Quintero Yoshioka - Manuel Alejandro Coral Lozano
+ *         Proyecto final - Algoritmos y programaciï¿½n II
  */
 public class PanelMenu extends JPanel implements ActionListener {
 
@@ -31,32 +31,32 @@ public class PanelMenu extends JPanel implements ActionListener {
 	// -----------------------------------------------------------------
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 
+	 *
 	 */
 	private final static String CREAR_JUGADOR = "CREAR JUGADOR";
 
 	/**
-	 * 
+	 *
 	 */
 	private final static String SELECCIONAR_JUGADOR = "SELECCIONAR JUGADOR";
 
 	/**
-	 * 
+	 *
 	 */
 	private final static String CREAR_PARTIDA = "CREAR PARTIDA";
 
 	/**
-	 * 
+	 *
 	 */
 	private final static String SELECCIONAR_PARTIDA = "SELECCIONAR PARTIDA";
 
 	/**
-	 * 
+	 *
 	 */
 	private final static String INTRUCCIONES = "INSTRUCCIONES";
 	// -----------------------------------------------------------------
@@ -64,7 +64,7 @@ public class PanelMenu extends JPanel implements ActionListener {
 	// -----------------------------------------------------------------
 
 	/**
-	 * 
+	 *
 	 */
 	InterfazSpaceInvaders interfaz;
 
@@ -73,17 +73,17 @@ public class PanelMenu extends JPanel implements ActionListener {
 	// -----------------------------------------------------------------
 
 	/**
-	 * 
+	 *
 	 */
 	DialogoCrearJugador dialogoCrearJugador;
 
 	/**
-	 * 
+	 *
 	 */
 	DialogoSeleccionarJugador dialogoSeleccionarJugador;
 
 	/**
-	 * 
+	 *
 	 */
 	DialogoCrearPartida dialogoCrearPartida;
 
@@ -93,52 +93,52 @@ public class PanelMenu extends JPanel implements ActionListener {
 	DialogoSeleccionarPartida dialogoSeleccionarPartida;
 
 	/**
-	 * 
+	 *
 	 */
 	DialogoInstrucciones dialogoInstrucciones;
-	
+
 	/**
-	 * 
+	 *
 	 */
 	DialogoMejoresPuntajes dialogoMejoresPuntajes;
 
 	/**
-	 * 
+	 *
 	 */
 	JPopupMenu popMenuJugar;
 
 	/**
-	 * 
+	 *
 	 */
 	JMenuItem menuCrearPartida;
 
 	/**
-	 * 
+	 *
 	 */
 	JMenuItem menuCargarPartida;
 
 	/**
-	 * 
+	 *
 	 */
 	JPopupMenu popMenuJugador;
 
 	/**
-	 * 
+	 *
 	 */
 	JMenuItem menuNuevoJugador;
 
 	/**
-	 * 
+	 *
 	 */
 	JMenuItem menuSeleccionarJugador;
 
 	/**
-	 * 
+	 *
 	 */
 	JLabel labOpenMenuJugar;
 
 	/**
-	 * 
+	 *
 	 */
 	JLabel labOpenMenuJugador;
 
@@ -146,12 +146,12 @@ public class PanelMenu extends JPanel implements ActionListener {
 	JLabel labLoginRapido;
 
 	/**
-	 * 
+	 *
 	 */
 	JLabel labMejoresPuntajes;
 
 	/**
-	 * 
+	 *
 	 */
 	JLabel labInstrucciones;
 
@@ -160,29 +160,29 @@ public class PanelMenu extends JPanel implements ActionListener {
 	// -----------------------------------------------------------------
 
 	/**
-	 * 
+	 *
 	 * @param pPrincipal
 	 */
 	public PanelMenu(InterfazSpaceInvaders interfaz) {
 
-		// Inicializa la asociación
+		// Inicializa la asociaciï¿½n
 		this.interfaz = interfaz;
 
-		// Establece el tamaño, la contenedora de tamaño y le quita el fondo que
+		// Establece el tamaï¿½o, la contenedora de tamaï¿½o y le quita el fondo que
 		// trae por defecto.
 		setPreferredSize(new Dimension(640, 480));
 		setLayout(null);
 		setOpaque(false);
 
-		// Título del juego: "SPACE INVADERS"
+		// Tï¿½tulo del juego: "SPACE INVADERS"
 		JLabel space = new JLabel("SPACE INVADERS");
 		space.setForeground(Color.WHITE);
 		space.setFont(new Font("ArcadeClassic", Font.PLAIN, 74));
 		space.setBounds(5, 75, 560, 80);
 		add(space);
 
-		// Inicializa los 4 diálogos que se puede ver en el menú
-		dialogoCrearJugador = new DialogoCrearJugador(interfaz);
+		// Inicializa los 4 dialogos que se puede ver en el menu
+		dialogoCrearJugador = DialogoCrearJugador.getInstance(interfaz);
 		dialogoCrearPartida = new DialogoCrearPartida(interfaz);
 		dialogoSeleccionarJugador = new DialogoSeleccionarJugador(interfaz);
 		dialogoSeleccionarPartida = new DialogoSeleccionarPartida(interfaz);
@@ -199,7 +199,7 @@ public class PanelMenu extends JPanel implements ActionListener {
 		menuCargarPartida = new JMenuItem("CARGAR PARTIDA");
 		menuCargarPartida.setFont(new Font("ArcadeClassic", Font.PLAIN, 30));
 
-		// Añadir los action listener a los item's de Menu Jugar
+		// Aï¿½adir los action listener a los item's de Menu Jugar
 		menuCrearPartida.addActionListener(this);
 		menuCrearPartida.setActionCommand(CREAR_PARTIDA);
 		menuCargarPartida.addActionListener(this);
@@ -220,7 +220,7 @@ public class PanelMenu extends JPanel implements ActionListener {
 		menuSeleccionarJugador = new JMenuItem("SELECCIONAR JUGADOR");
 		menuSeleccionarJugador.setFont(new Font("ArcadeClassic", Font.PLAIN, 30));
 
-		// Añadir los action listener a los Item's de Menu Jugador
+		// Aï¿½adir los action listener a los Item's de Menu Jugador
 		menuNuevoJugador.addActionListener(this);
 		menuNuevoJugador.setActionCommand(CREAR_JUGADOR);
 		menuSeleccionarJugador.addActionListener(this);
@@ -241,12 +241,12 @@ public class PanelMenu extends JPanel implements ActionListener {
 		add(labLoginRapido);
 		labLoginRapido.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
-				String respuesta = 	JOptionPane.showInputDialog(null, "Por favor ingresa tu nickname", "Login rápido", JOptionPane.DEFAULT_OPTION);
+				String respuesta = 	JOptionPane.showInputDialog(null, "Por favor ingresa tu nickname", "Login rï¿½pido", JOptionPane.DEFAULT_OPTION);
 				if(respuesta == null || respuesta.equals("")){
-					JOptionPane.showMessageDialog(null, "Por favor ingresar un nickname válido",
+					JOptionPane.showMessageDialog(null, "Por favor ingresar un nickname vï¿½lido",
 							"Error al escribir el nickname", JOptionPane.ERROR_MESSAGE);
 				} else if(respuesta.length() != 5){
-					JOptionPane.showMessageDialog(null, "Recuerde que el nickname contiene 5 dígitos",
+					JOptionPane.showMessageDialog(null, "Recuerde que el nickname contiene 5 dï¿½gitos",
 							"Error al escribir el nickname", JOptionPane.ERROR_MESSAGE);
 				} else
 					interfaz.loginRapido(respuesta);
@@ -368,7 +368,7 @@ public class PanelMenu extends JPanel implements ActionListener {
 	// -----------------------------------------------------------------
 
 	/**
-	 * 
+	 *
 	 */
 	public void actionPerformed(ActionEvent e) {
 
@@ -400,18 +400,18 @@ public class PanelMenu extends JPanel implements ActionListener {
 	}
 
 	// -----------------------------------------------------------------
-	// -----------------------------Métodos-----------------------------
+	// -----------------------------Mï¿½todos-----------------------------
 	// -----------------------------------------------------------------
 
 	/**
-	 * 
+	 *
 	 */
 	public DialogoSeleccionarJugador getDialogoSeleccionarJugador() {
 		return dialogoSeleccionarJugador;
 	}
 
 	/**
-	 * 
+	 *
 	 * @return
 	 */
 	public DialogoSeleccionarPartida getDialogoSeleccionarPartida() {
@@ -420,7 +420,7 @@ public class PanelMenu extends JPanel implements ActionListener {
 
 
 	/**
-	 * 
+	 *
 	 */
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
