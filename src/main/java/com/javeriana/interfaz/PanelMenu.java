@@ -22,7 +22,7 @@ import javax.swing.JPopupMenu;
 
 /**
  * Panel que contiene el Menu principal del juego
- * 
+ *
  * @author Juan Sebasti�n Quintero Yoshioka - Manuel Alejandro Coral Lozano
  *         Proyecto final - Algoritmos y programaci�n II
  */
@@ -33,32 +33,32 @@ public class PanelMenu extends JPanel implements ActionListener {
 	// -----------------------------------------------------------------
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 
+	 *
 	 */
 	private final static String CREAR_JUGADOR = "CREAR JUGADOR";
 
 	/**
-	 * 
+	 *
 	 */
 	private final static String SELECCIONAR_JUGADOR = "SELECCIONAR JUGADOR";
 
 	/**
-	 * 
+	 *
 	 */
 	private final static String CREAR_PARTIDA = "CREAR PARTIDA";
 
 	/**
-	 * 
+	 *
 	 */
 	private final static String SELECCIONAR_PARTIDA = "SELECCIONAR PARTIDA";
 
 	/**
-	 * 
+	 *
 	 */
 	private final static String INTRUCCIONES = "INSTRUCCIONES";
 	// -----------------------------------------------------------------
@@ -66,7 +66,7 @@ public class PanelMenu extends JPanel implements ActionListener {
 	// -----------------------------------------------------------------
 
 	/**
-	 * 
+	 *
 	 */
 	InterfazSpaceInvaders interfaz;
 
@@ -75,17 +75,17 @@ public class PanelMenu extends JPanel implements ActionListener {
 	// -----------------------------------------------------------------
 
 	/**
-	 * 
+	 *
 	 */
 	DialogoCrearJugador dialogoCrearJugador;
 
 	/**
-	 * 
+	 *
 	 */
 	DialogoSeleccionarJugador dialogoSeleccionarJugador;
 
 	/**
-	 * 
+	 *
 	 */
 	DialogoCrearPartida dialogoCrearPartida;
 
@@ -95,52 +95,52 @@ public class PanelMenu extends JPanel implements ActionListener {
 	DialogoSeleccionarPartida dialogoSeleccionarPartida;
 
 	/**
-	 * 
+	 *
 	 */
 	DialogoInstrucciones dialogoInstrucciones;
-	
+
 	/**
-	 * 
+	 *
 	 */
 	DialogoMejoresPuntajes dialogoMejoresPuntajes;
 
 	/**
-	 * 
+	 *
 	 */
 	JPopupMenu popMenuJugar;
 
 	/**
-	 * 
+	 *
 	 */
 	JMenuItem menuCrearPartida;
 
 	/**
-	 * 
+	 *
 	 */
 	JMenuItem menuCargarPartida;
 
 	/**
-	 * 
+	 *
 	 */
 	JPopupMenu popMenuJugador;
 
 	/**
-	 * 
+	 *
 	 */
 	JMenuItem menuNuevoJugador;
 
 	/**
-	 * 
+	 *
 	 */
 	JMenuItem menuSeleccionarJugador;
 
 	/**
-	 * 
+	 *
 	 */
 	JLabel labOpenMenuJugar;
 
 	/**
-	 * 
+	 *
 	 */
 	JLabel labOpenMenuJugador;
 
@@ -148,12 +148,12 @@ public class PanelMenu extends JPanel implements ActionListener {
 	JLabel labLoginRapido;
 
 	/**
-	 * 
+	 *
 	 */
 	JLabel labMejoresPuntajes;
 
 	/**
-	 * 
+	 *
 	 */
 	JLabel labInstrucciones;
 
@@ -370,7 +370,7 @@ public class PanelMenu extends JPanel implements ActionListener {
 	// -----------------------------------------------------------------
 
 	/**
-	 * 
+	 *
 	 */
 	public void actionPerformed(ActionEvent e) {
 
@@ -406,14 +406,14 @@ public class PanelMenu extends JPanel implements ActionListener {
 	// -----------------------------------------------------------------
 
 	/**
-	 * 
+	 *
 	 */
 	public DialogoSeleccionarJugador getDialogoSeleccionarJugador() {
 		return dialogoSeleccionarJugador;
 	}
 
 	/**
-	 * 
+	 *
 	 * @return
 	 */
 	public DialogoSeleccionarPartida getDialogoSeleccionarPartida() {
@@ -422,7 +422,7 @@ public class PanelMenu extends JPanel implements ActionListener {
 
 
 	/**
-	 * 
+	 *
 	 */
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
