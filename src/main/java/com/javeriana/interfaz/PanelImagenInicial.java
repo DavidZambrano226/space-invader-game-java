@@ -124,9 +124,9 @@ public class PanelImagenInicial extends JPanel implements KeyListener {
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_ENTER)
 			// En caso que el usuario presione la tecla Enter, cambia al panel
-			// que contiene el men� del juego
+			// que contiene el Menu del juego
 			if(!interfaz.estaEnFuncionamiento())
-			interfaz.cambiarPanel("Men�");
+			interfaz.cambiarPanel("Menu");
 	}
 
 	/**
@@ -148,6 +148,6 @@ public class PanelImagenInicial extends JPanel implements KeyListener {
 	@Override
 	public void keyTyped(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_SPACE)
-			interfaz.cambiarPanel("Men�");
+			interfaz.cambiarPanel("Menu");
 	}
 }

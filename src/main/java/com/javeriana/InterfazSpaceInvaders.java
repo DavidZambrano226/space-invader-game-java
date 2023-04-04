@@ -70,7 +70,7 @@ public class InterfazSpaceInvaders extends JFrame {
 		addKeyListener(imagen);
 		contenedor = this.getContentPane();
 		card.addLayoutComponent(imagen, "Inicio");
-		card.addLayoutComponent(panelMenu, "Menú");
+		card.addLayoutComponent(panelMenu, "Menu");
 		card.addLayoutComponent(panelNivel, "Juego");
 
 		contenedor.add(imagen);
@@ -96,8 +96,8 @@ public class InterfazSpaceInvaders extends JFrame {
 	 * @param nombre
 	 */
 	public void cambiarPanel(String nombre) {
-		if (nombre.equals("Menú")) {
-			card.show(contenedor, "Menú");
+		if (nombre.equals("Menu")) {
+			card.show(contenedor, "Menu");
 		} else if (nombre.equals("Juego")) {
 			card.show(contenedor, "Juego");
 		}
@@ -364,7 +364,7 @@ public class InterfazSpaceInvaders extends JFrame {
 				panelMenu.repaint();
 				mundo.eliminarPartida();
 				actualizarPartidas();
-				cambiarPanel("Menú");	
+				cambiarPanel("Menu");	
 				panelMenu.repaint();
 			}
 		} catch (IOException e) {
@@ -383,7 +383,7 @@ public class InterfazSpaceInvaders extends JFrame {
 			e.printStackTrace();
 		}
 		actualizarPartidas();
-		cambiarPanel("Menú");	
+		cambiarPanel("Menu");	
 		panelMenu.repaint();
 	}
 

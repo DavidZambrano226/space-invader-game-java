@@ -21,7 +21,7 @@ import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
 
 /**
- * Panel que contiene el men� principal del juego
+ * Panel que contiene el Menu principal del juego
  * 
  * @author Juan Sebasti�n Quintero Yoshioka - Manuel Alejandro Coral Lozano
  *         Proyecto final - Algoritmos y programaci�n II
@@ -183,7 +183,7 @@ public class PanelMenu extends JPanel implements ActionListener {
 		space.setBounds(5, 75, 560, 80);
 		add(space);
 
-		// Inicializa los 4 di�logos que se puede ver en el men�
+		// Inicializa los 4 di�logos que se puede ver en el Menu
 		dialogoCrearJugador = new DialogoCrearJugador(interfaz);
 		dialogoCrearPartida = new DialogoCrearPartida(interfaz);
 		dialogoSeleccionarJugador = new DialogoSeleccionarJugador(interfaz);
