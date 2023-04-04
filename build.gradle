@@ -1,0 +1,24 @@
+apply plugin:'java'
+apply from: "$projectDir/gradle/preCommit.gradle"
+
+defaultTasks 'build'
+
+
+group = 'com.javeriana'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '8'
+
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    // testCompile 'junit:junit:4.+'
+}
