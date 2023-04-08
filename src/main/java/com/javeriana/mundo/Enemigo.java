@@ -60,10 +60,6 @@ public abstract class Enemigo extends Nave {
 		rutaImagen2 = rutaImage2;
 	}
 
-	public Enemigo() {
-
-	}
-
 	// -----------------------------------------------------------------
 	// -----------------------------M�todos-----------------------------
 	// -----------------------------------------------------------------
@@ -124,5 +120,5 @@ public abstract class Enemigo extends Nave {
 	public void moverAbajo (int dir) {
 		posY += dir*10;
 	}
-	public abstract Enemigo createEnemigo();
+
 }
