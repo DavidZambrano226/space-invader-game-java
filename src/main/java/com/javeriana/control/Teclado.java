@@ -4,11 +4,12 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 import com.javeriana.InterfazSpaceInvaders;
+import com.javeriana.hilos.SpaceInvaderStartFacade;
 import com.javeriana.mundo.NaveJugador;
 import com.javeriana.mundo.SpaceInvaders;
 
 /**
- * 
+ *
  * @author Manuel Alejandro Coral Lozano - Juan Sebasti�n Quintero Yoshioka
  *         Proyecto final - Algoritmos y programaci�n II.
  */
@@ -65,7 +66,7 @@ public class Teclado implements KeyListener {
 		if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
 			interfaz.cerrar();
 		}
-		
+
 		if (e.getKeyCode() == KeyEvent.VK_P) {
 			if (interfaz.estaEnPausa()) {
 				interfaz.modificarFuncionamiento(true);
@@ -79,14 +80,14 @@ public class Teclado implements KeyListener {
 	}
 
 	/**
-	 * 
+	 *
 	 */
 	public void keyReleased(KeyEvent e) {
 
 	}
 
 	/**
-	 * 
+	 *
 	 */
 	public void keyTyped(KeyEvent e) {
 
