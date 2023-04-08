@@ -16,11 +16,6 @@ import com.javeriana.control.KeyBoardProxy;
 import com.javeriana.control.Teclado;
 import com.javeriana.excepciones.NicknameYaExisteException;
 import com.javeriana.excepciones.PartidaYaExisteException;
-import com.javeriana.hilos.HiloAnimacionEnemigos;
-import com.javeriana.hilos.HiloAuxiliarCreaDisparo;
-import com.javeriana.hilos.HiloDisparoEnemigos;
-import com.javeriana.hilos.HiloDisparoJugador;
-import com.javeriana.hilos.HiloEnemigos;
 import com.javeriana.interfaz.DialogoMejoresPuntajes;
 import com.javeriana.interfaz.PanelImagenInicial;
 import com.javeriana.interfaz.PanelMenu;
@@ -28,6 +23,7 @@ import com.javeriana.interfaz.PanelNivel;
 import com.javeriana.mundo.NaveJugador;
 import com.javeriana.mundo.Partida;
 import com.javeriana.mundo.SpaceInvaders;
+import com.javeriana.hilos.SpaceInvaderDisposeFacade;
 
 public class InterfazSpaceInvaders extends JFrame {
 
@@ -50,21 +46,12 @@ public class InterfazSpaceInvaders extends JFrame {
 
 	private SpaceInvaders mundo;
 
-	private HiloEnemigos hilitoEnemigo;
-
-	private HiloDisparoJugador hilitoDisparo;
-
-	private HiloDisparoEnemigos hilitoEnemigoDisparo;
-
-	private HiloAuxiliarCreaDisparo hilitoAuxiliar;
-
-	private HiloAnimacionEnemigos hilitoAnimacion;
-
 	private boolean pausa;
 
 	public InterfazSpaceInvaders() {
 
 		mundo = new SpaceInvaders(false);
+
 
 		panelMenu = new PanelMenu(this);
 		panelNivel = new PanelNivel(mundo.getPartidaActual(), mundo, this);
@@ -96,7 +83,7 @@ public class InterfazSpaceInvaders extends JFrame {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param nombre
 	 */
 	public void cambiarPanel(String nombre) {
@@ -120,7 +107,7 @@ public class InterfazSpaceInvaders extends JFrame {
 	}
 
 	/**
-	 * 
+	 *
 	 * @return
 	 */
 	public boolean estaEnPausa() {
@@ -128,68 +115,16 @@ public class InterfazSpaceInvaders extends JFrame {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param paus
 	 */
 	public void cambiarPausa (boolean paus) {
 		this.pausa = paus;
 	}
 
-	/**
-	 * 
-	 */
-	public void startHiloEnemigo() {
-		for (int i = 0; i < mundo.getPartidaActual().getEnemigos().length; i++) {
-			for (int j = 0; j < mundo.getPartidaActual().getEnemigos()[0].length; j++) {
-				if (mundo.getPartidaActual().getEnemigos()[i][j] != null) {
-					hilitoEnemigo = new HiloEnemigos(mundo.getPartidaActual().getEnemigos()[i][j], this);
-					hilitoEnemigo.start();
-				}
-			}
-		}
-	}
 
 	/**
-	 * 
-	 */
-	public void startHiloAuxiliar() {
-		hilitoAuxiliar = new HiloAuxiliarCreaDisparo(mundo.getPartidaActual(), this);
-		hilitoAuxiliar.start();
-	}
-
-	/**
-	 * 
-	 */
-	public void startHiloAnimacion() {
-		for (int i = 0; i < mundo.getPartidaActual().getEnemigos().length; i++) {
-			for (int j = 0; j < mundo.getPartidaActual().getEnemigos()[0].length; j++) {
-				if (mundo.getPartidaActual().getEnemigos()[i][j] != null) {
-					hilitoAnimacion = new HiloAnimacionEnemigos(mundo.getPartidaActual().getEnemigos()[i][j], this);
-					hilitoAnimacion.start();
-				}
-			}
-		}
-	}
-
-	/**
-	 * 
-	 */
-	public void startHiloDisparoEnemigo() {
-		hilitoEnemigoDisparo = new HiloDisparoEnemigos(mundo.getPartidaActual(), this, mundo);
-		hilitoEnemigoDisparo.start();
-	}
-
-	/**
-	 * 
-	 */
-	public void startHiloJugador() {
-		hilitoDisparo = new HiloDisparoJugador((NaveJugador) mundo.getJugadorActual(), this,
-				mundo.getPartidaActual().getEnemigos(), mundo.getPartidaActual());
-		hilitoDisparo.start();
-	}
-
-	/**
-	 * 
+	 *
 	 * @return
 	 */
 	public int darPosActualJugador() {
@@ -197,7 +132,7 @@ public class InterfazSpaceInvaders extends JFrame {
 	}
 
 	/**
-	 * 
+	 *
 	 * @return
 	 */
 	public boolean estaEnFuncionamiento() {
@@ -205,7 +140,7 @@ public class InterfazSpaceInvaders extends JFrame {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param salida
 	 */
 	public void modificarFuncionamiento (boolean salida) {
@@ -213,7 +148,7 @@ public class InterfazSpaceInvaders extends JFrame {
 	}
 
 	/**
-	 * 
+	 *
 	 * @return
 	 */
 	public PanelNivel getPanelNivel() {
@@ -221,7 +156,7 @@ public class InterfazSpaceInvaders extends JFrame {
 	}
 
 	/**
-	 * 
+	 *
 	 * @return
 	 */
 	public NaveJugador getJugadorActual() {
@@ -229,7 +164,7 @@ public class InterfazSpaceInvaders extends JFrame {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param panelNivel
 	 */
 	public void setPanelNivel(PanelNivel panelNivel) {
@@ -237,7 +172,7 @@ public class InterfazSpaceInvaders extends JFrame {
 	}
 
 	/**
-	 * 
+	 *
 	 * @return
 	 */
 	public PanelMenu getPanelMenu() {
@@ -245,38 +180,39 @@ public class InterfazSpaceInvaders extends JFrame {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param panelMenu
 	 */
 	public void setPanelMenu(PanelMenu panelMenu) {
 		this.panelMenu = panelMenu;
 	}
 
+	private SpaceInvaderDisposeFacade disposeFacade = new SpaceInvaderDisposeFacade();
+
 	/**
-	 * 
+	 *
+	 */
+	public void startHiloJugador() {
+		disposeFacade.startKeyboardPlayer();
+	}
+
+	/**
+	 *
 	 */
 	public void iniciarTodosLosHilos() {
 		mundo.setEnFuncionamiento(true);
-		startHiloJugador();
-		startHiloEnemigo();
-		startHiloAnimacion();
-		startHiloAuxiliar();
-		startHiloDisparoEnemigo();
+		disposeFacade.iniciarJuego(mundo, this);
 	}
 
 	/**
-	 * 
+	 *
 	 */
-	public void matarHilos (){
-		hilitoAnimacion = null;
-		hilitoAuxiliar = null;
-		hilitoDisparo = null;
-		hilitoEnemigoDisparo = null;
-		hilitoEnemigo = null;
+	public void matarHilos (){;
+		disposeFacade.detenerJuego();
 	}
 
 	/**
-	 * 
+	 *
 	 * @param nombre
 	 */
 	public void reqCrearPartida(String nombre) {
@@ -294,7 +230,7 @@ public class InterfazSpaceInvaders extends JFrame {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param nombre
 	 * @param nickname
 	 */
@@ -311,7 +247,7 @@ public class InterfazSpaceInvaders extends JFrame {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param nickname
 	 */
 	public void actualizarJugadorActual(String nickname) {
@@ -325,7 +261,7 @@ public class InterfazSpaceInvaders extends JFrame {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param nombre
 	 */
 	public void actualizarPartidaActual(String nombre) {
@@ -338,7 +274,7 @@ public class InterfazSpaceInvaders extends JFrame {
 	}
 
 	/**
-	 * 
+	 *
 	 */
 	public void actualizarJugadores() {
 		ArrayList<NaveJugador> jugadores = mundo.getJugadores();
@@ -348,7 +284,7 @@ public class InterfazSpaceInvaders extends JFrame {
 	}
 
 	/**
-	 * 
+	 *
 	 */
 	public void actualizarPartidas() {
 		ArrayList<Partida> partidas = mundo.darPartidasJugador();
@@ -358,7 +294,7 @@ public class InterfazSpaceInvaders extends JFrame {
 	}
 
 	/**
-	 * 
+	 *
 	 */
 	public void nivelCompleto () {
 		try {
@@ -368,7 +304,7 @@ public class InterfazSpaceInvaders extends JFrame {
 				panelMenu.repaint();
 				mundo.eliminarPartida();
 				actualizarPartidas();
-				cambiarPanel("Menu");	
+				cambiarPanel("Menu");
 				panelMenu.repaint();
 			}
 		} catch (IOException e) {
@@ -377,7 +313,7 @@ public class InterfazSpaceInvaders extends JFrame {
 	}
 
 	/**
-	 * 
+	 *
 	 */
 	public void perder(){
 		panelMenu.repaint();
@@ -387,12 +323,12 @@ public class InterfazSpaceInvaders extends JFrame {
 			e.printStackTrace();
 		}
 		actualizarPartidas();
-		cambiarPanel("Menu");	
+		cambiarPanel("Menu");
 		panelMenu.repaint();
 	}
 
 	/**
-	 * 
+	 *
 	 */
 	public void ordenarJugadores() {
 		ArrayList<NaveJugador> jugadores = mundo.ordenarPorNickname();
@@ -402,7 +338,7 @@ public class InterfazSpaceInvaders extends JFrame {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param nickname
 	 */
 	public void loginRapido(String nickname){
@@ -414,16 +350,16 @@ public class InterfazSpaceInvaders extends JFrame {
 	}
 
 	/**
-	 * 
+	 *
 	 */
 	public void mejoresPuntajes(){
 		panelMenu.setDialogoMejoresPuntajes(new DialogoMejoresPuntajes(this,mundo.mejoresPuntajes()));
-		panelMenu.getDialogoMejoresPuntajes().mostrar();	
+		panelMenu.getDialogoMejoresPuntajes().mostrar();
 	}
 
 
 	/**
-	 * 
+	 *
 	 * @param args
 	 */
 	public static void main(String[] args) {
