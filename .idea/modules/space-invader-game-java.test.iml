@@ -8,5 +8,4 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="com.javeriana.space-invader-game-java.main" />
   </component>
-  <component name="TestModuleProperties" production-module="space-invader-game-java.main" />
 </module>

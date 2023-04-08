@@ -120,5 +120,5 @@ public abstract class Enemigo extends Nave {
 	public void moverAbajo (int dir) {
 		posY += dir*10;
 	}
-	
+
 }
