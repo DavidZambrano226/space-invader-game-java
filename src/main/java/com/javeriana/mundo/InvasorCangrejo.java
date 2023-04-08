@@ -7,6 +7,9 @@ package com.javeriana.mundo;
  */
 public class InvasorCangrejo extends Enemigo {
 
+	private static final String rutaImage ="./data/imagenes/Naves/p0.png";
+	private  static final String ruta =	"./data/imagenes/Naves/p1.png";
+
 	// -----------------------------------------------------------------
 	// ---------------------------Constructor---------------------------
 	// -----------------------------------------------------------------
@@ -21,12 +24,9 @@ public class InvasorCangrejo extends Enemigo {
 	 * @param alto
 	 * @param direccion
 	 */
-	public InvasorCangrejo(double velocidad, int posX, int posY, int vida, int ancho, int alto, int direccion, String rutaImage, String ruta) {
+	public InvasorCangrejo(double velocidad, int posX, int posY, int vida, int ancho, int alto, int direccion) {
 		super(velocidad, posX, posY, vida, ancho, alto, direccion, rutaImage, ruta);
-		
-		rutaImage = ("./data/imagenes/Naves/p0.png");
 		setPuntosPorMuerte(20);
 		
 	}
-	
 }

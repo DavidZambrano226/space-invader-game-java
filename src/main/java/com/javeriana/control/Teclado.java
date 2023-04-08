@@ -5,6 +5,13 @@ import java.awt.event.KeyListener;
 
 import com.javeriana.InterfazSpaceInvaders;
 import com.javeriana.hilos.SpaceInvaderDisposeFacade;
+import com.javeriana.commands.ICommand;
+import com.javeriana.commands.InvokerCommand;
+import com.javeriana.commands.Receiver;
+import com.javeriana.commands.impl.CloseGameCommand;
+import com.javeriana.commands.impl.PauseCommand;
+import com.javeriana.commands.impl.PlayCommand;
+
 import com.javeriana.mundo.NaveJugador;
 import com.javeriana.mundo.SpaceInvaders;
 
@@ -13,7 +20,7 @@ import com.javeriana.mundo.SpaceInvaders;
  * @author Manuel Alejandro Coral Lozano - Juan Sebasti�n Quintero Yoshioka
  *         Proyecto final - Algoritmos y programaci�n II.
  */
-public class Teclado implements KeyListener {
+public class Teclado implements KeyListener, IKeyBoard {
 
 	// -----------------------------------------------------------------
 	// ----------------------------Atributos----------------------------
@@ -39,8 +46,10 @@ public class Teclado implements KeyListener {
 
 	}
 
-	// TODO DZ: Check if is possible to implement a compartmental pattern
+	@Override
 	public void keyPressed(KeyEvent e) {
+		InvokerCommand invokerCommand = new InvokerCommand();
+		Receiver receiver = new Receiver(interfaz);
 
 		if (actu.getEnFuncionamiento()) {
 			navesita = actu.getJugadorActual();
@@ -64,17 +73,15 @@ public class Teclado implements KeyListener {
 		}
 
 		if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
-			interfaz.cerrar();
+			invokerCommand.executeCommand(new CloseGameCommand(receiver));
 		}
 
 		if (e.getKeyCode() == KeyEvent.VK_P) {
+
 			if (interfaz.estaEnPausa()) {
-				interfaz.modificarFuncionamiento(true);
-				interfaz.cambiarPausa(false);
-				interfaz.iniciarTodosLosHilos();
+				invokerCommand.executeCommand(new PlayCommand(receiver));
 			} else {
-				interfaz.modificarFuncionamiento(false);
-				interfaz.cambiarPausa(true);
+				invokerCommand.executeCommand(new PauseCommand(receiver));
 			}
 		}
 	}
