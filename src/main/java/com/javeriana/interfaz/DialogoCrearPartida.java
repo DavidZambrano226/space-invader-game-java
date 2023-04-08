@@ -23,17 +23,17 @@ public class DialogoCrearPartida extends JDialog implements ActionListener {
 	// -----------------------------------------------------------------
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 
+	 *
 	 */
 	public final static String ACEPTAR = "Aceptar";
 
 	/**
-	 * 
+	 *
 	 */
 	public final static String CANCELAR = "Cancelar";
 
@@ -42,12 +42,12 @@ public class DialogoCrearPartida extends JDialog implements ActionListener {
 	// -----------------------------------------------------------------
 
 	/**
-	 * 
+	 *
 	 */
 	InterfazSpaceInvaders interfaz;
 
 	/**
-	 * 
+	 *
 	 */
 	JPanel auxiliar;
 
@@ -56,27 +56,27 @@ public class DialogoCrearPartida extends JDialog implements ActionListener {
 	// -----------------------------------------------------------------
 
 	/**
-	 * 
+	 *
 	 */
 	JLabel nombre;
 
 	/**
-	 * 
+	 *
 	 */
 	JLabel nombre1;
 
 	/**
-	 * 
+	 *
 	 */
 	JTextField txtNombre;
 
 	/**
-	 * 
+	 *
 	 */
 	JButton butBotonAceptar;
 
 	/**
-	 * 
+	 *
 	 */
 	JButton butBotonCancelar;
 
@@ -85,7 +85,7 @@ public class DialogoCrearPartida extends JDialog implements ActionListener {
 	// -----------------------------------------------------------------
 
 	/**
-	 * 
+	 *
 	 * @param interfaz
 	 */
 	public DialogoCrearPartida(InterfazSpaceInvaders interfaz) {
@@ -153,7 +153,7 @@ public class DialogoCrearPartida extends JDialog implements ActionListener {
 	// -----------------------------------------------------------------
 
 	/**
-	 * 
+	 *
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -173,12 +173,12 @@ public class DialogoCrearPartida extends JDialog implements ActionListener {
 
 	}
 
-	// -----------------------------------------------------------------
+	//      -----------------------------------------------------------------
 	// -----------------------------M�todos-----------------------------
 	// -----------------------------------------------------------------
 
 	/**
-	 * 
+	 *
 	 */
 	public void mostrar() {
 		setSize(400, 225);
@@ -188,7 +188,7 @@ public class DialogoCrearPartida extends JDialog implements ActionListener {
 	}
 
 	/**
-	 * 
+	 *
 	 * @return
 	 */
 	public String darNombre() {

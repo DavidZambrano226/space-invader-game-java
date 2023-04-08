@@ -13,11 +13,6 @@ import javax.swing.JOptionPane;
 import com.javeriana.control.Teclado;
 import com.javeriana.excepciones.NicknameYaExisteException;
 import com.javeriana.excepciones.PartidaYaExisteException;
-import com.javeriana.hilos.HiloAnimacionEnemigos;
-import com.javeriana.hilos.HiloAuxiliarCreaDisparo;
-import com.javeriana.hilos.HiloDisparoEnemigos;
-import com.javeriana.hilos.HiloDisparoJugador;
-import com.javeriana.hilos.HiloEnemigos;
 import com.javeriana.interfaz.DialogoMejoresPuntajes;
 import com.javeriana.interfaz.PanelImagenInicial;
 import com.javeriana.interfaz.PanelMenu;
@@ -25,7 +20,7 @@ import com.javeriana.interfaz.PanelNivel;
 import com.javeriana.mundo.NaveJugador;
 import com.javeriana.mundo.Partida;
 import com.javeriana.mundo.SpaceInvaders;
-import com.javeriana.hilos.SpaceInvaderStartFacade;
+import com.javeriana.hilos.SpaceInvaderDisposeFacade;
 
 public class InterfazSpaceInvaders extends JFrame {
 
@@ -188,13 +183,13 @@ public class InterfazSpaceInvaders extends JFrame {
 		this.panelMenu = panelMenu;
 	}
 
-	private SpaceInvaderStartFacade startFacade = new SpaceInvaderStartFacade();
+	private SpaceInvaderDisposeFacade disposeFacade = new SpaceInvaderDisposeFacade();
 
 	/**
 	 *
 	 */
 	public void startHiloJugador() {
-		startFacade.startKeyboardPlayer();
+		disposeFacade.startKeyboardPlayer();
 	}
 
 	/**
@@ -202,14 +197,14 @@ public class InterfazSpaceInvaders extends JFrame {
 	 */
 	public void iniciarTodosLosHilos() {
 		mundo.setEnFuncionamiento(true);
-		startFacade.iniciarJuego(mundo, this);
+		disposeFacade.iniciarJuego(mundo, this);
 	}
 
 	/**
 	 *
 	 */
 	public void matarHilos (){;
-		startFacade.detenerJuego();
+		disposeFacade.detenerJuego();
 	}
 
 	/**

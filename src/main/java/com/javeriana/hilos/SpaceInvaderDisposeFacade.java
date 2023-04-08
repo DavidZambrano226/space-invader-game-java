@@ -4,7 +4,7 @@ import com.javeriana.InterfazSpaceInvaders;
 import com.javeriana.mundo.NaveJugador;
 import com.javeriana.mundo.SpaceInvaders;
 
-public class SpaceInvaderStartFacade {
+public class SpaceInvaderDisposeFacade {
 
     private HiloEnemigos hilitoEnemigo;
 
@@ -31,7 +31,6 @@ public class SpaceInvaderStartFacade {
     }
 
     private void startHiloAuxiliar( SpaceInvaders mundo, InterfazSpaceInvaders instance) {
-
         hilitoAuxiliar = new HiloAuxiliarCreaDisparo(mundo.getPartidaActual(), instance);
         hilitoAuxiliar.start();
     }
@@ -74,11 +73,10 @@ public class SpaceInvaderStartFacade {
     }
 
     public void detenerJuego() {
-        // hilitoAuxiliar.interrupt();
-        hilitoAuxiliar = null;
-        hilitoDisparo = null;
-        hilitoEnemigoDisparo = null;
-        hilitoEnemigo = null;
+          hilitoAuxiliar.interrupt();
+        hilitoDisparo.interrupt();
+        hilitoEnemigoDisparo.interrupt();
+        hilitoEnemigo.interrupt();
     }
 
 

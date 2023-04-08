@@ -4,7 +4,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 import com.javeriana.InterfazSpaceInvaders;
-import com.javeriana.hilos.SpaceInvaderStartFacade;
+import com.javeriana.hilos.SpaceInvaderDisposeFacade;
 import com.javeriana.mundo.NaveJugador;
 import com.javeriana.mundo.SpaceInvaders;
 
