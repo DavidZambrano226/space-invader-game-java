@@ -29,11 +29,4 @@ public class InvasorCangrejo extends Enemigo {
 		setPuntosPorMuerte(20);
 		
 	}
-
-	@Override
-	public Enemigo createEnemigo() {
-		return null;
-	}
-
-
 }

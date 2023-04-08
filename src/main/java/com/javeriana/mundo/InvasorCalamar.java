@@ -30,10 +30,4 @@ public class InvasorCalamar extends Enemigo {
 		setPuntosPorMuerte(30);
 
 	}
-
-	@Override
-	public Enemigo createEnemigo() {
-		return null;
-	}
-
 }
