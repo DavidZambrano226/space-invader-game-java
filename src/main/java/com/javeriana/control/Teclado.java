@@ -18,7 +18,7 @@ import com.javeriana.mundo.SpaceInvaders;
  * @author Manuel Alejandro Coral Lozano - Juan Sebasti�n Quintero Yoshioka
  *         Proyecto final - Algoritmos y programaci�n II.
  */
-public class Teclado implements KeyListener {
+public class Teclado implements KeyListener, IKeyBoard {
 
 	// -----------------------------------------------------------------
 	// ----------------------------Atributos----------------------------
@@ -44,6 +44,7 @@ public class Teclado implements KeyListener {
 
 	}
 
+	@Override
 	public void keyPressed(KeyEvent e) {
 		InvokerCommand invokerCommand = new InvokerCommand();
 		Receiver receiver = new Receiver(interfaz);

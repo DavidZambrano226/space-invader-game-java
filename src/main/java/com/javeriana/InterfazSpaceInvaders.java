@@ -3,6 +3,7 @@ package com.javeriana;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Container;
+import java.awt.event.KeyListener;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -10,6 +11,8 @@ import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
+import com.javeriana.control.IKeyBoard;
+import com.javeriana.control.KeyBoardProxy;
 import com.javeriana.control.Teclado;
 import com.javeriana.excepciones.NicknameYaExisteException;
 import com.javeriana.excepciones.PartidaYaExisteException;
@@ -39,7 +42,7 @@ public class InterfazSpaceInvaders extends JFrame {
 
 	private PanelImagenInicial imagen;
 
-	private Teclado tecladito;
+	private IKeyBoard tecladito;
 
 	private PanelMenu panelMenu;
 
@@ -80,8 +83,9 @@ public class InterfazSpaceInvaders extends JFrame {
 		contenedor.setLayout(card);
 		card.show(contenedor, "Inicio");
 
-		tecladito = new Teclado(this, mundo);
-		addKeyListener(tecladito);
+		Teclado teclado = new Teclado(this, mundo);
+		tecladito = new KeyBoardProxy(teclado);
+		addKeyListener((KeyListener) tecladito);
 
 		setSize(640, 480);
 		setUndecorated(true);
