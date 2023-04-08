@@ -29,11 +29,4 @@ public class InvasorPulpo extends Enemigo {
 
 		setPuntosPorMuerte(10);
 	}
-
-	@Override
-	public Enemigo createEnemigo() {
-		return null;
-	}
-
-
 }
