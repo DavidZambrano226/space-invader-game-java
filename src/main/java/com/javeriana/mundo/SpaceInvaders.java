@@ -10,10 +10,11 @@ import java.util.ArrayList;
 
 import com.javeriana.excepciones.NicknameYaExisteException;
 import com.javeriana.excepciones.PartidaYaExisteException;
+import com.javeriana.mundo.strategy.StrategyComparator;
 
 /**
  * Clase principal del mundo que representa el juego.
- * 
+ *
  * @author Manuel Alejandro Coral Lozano - Juan Sebasti�n Quintero Yoshioka
  *         Proyecto final - Algoritmos y programaci�n II.
  */
@@ -24,22 +25,22 @@ public class SpaceInvaders {
 	// -----------------------------------------------------------------
 
 	/**
-	 * 
+	 *
 	 */
 	private ArrayList<NaveJugador> jugadores;
 
 	/**
-	 * 
+	 *
 	 */
 	private Partida partidaActual;
 
 	/**
-	 * 
+	 *
 	 */
 	private NaveJugador jugadorActual;
 
 	/**
-	 * 
+	 *
 	 */
 	private Puntaje primerPuntaje;
 
@@ -48,7 +49,7 @@ public class SpaceInvaders {
 	// -----------------------------------------------------------------
 
 	/**
-	 * 
+	 *
 	 */
 	private boolean enFuncionamiento;
 
@@ -57,7 +58,7 @@ public class SpaceInvaders {
 	// -----------------------------------------------------------------
 
 	/**
-	 * 
+	 *
 	 * @param enFuncionamiento
 	 */
 	public SpaceInvaders(boolean enFuncionamiento) {
@@ -85,7 +86,7 @@ public class SpaceInvaders {
 	// -----------------------------------------------------------------
 
 	/**
-	 * 
+	 *
 	 * @return
 	 */
 	public boolean getEnFuncionamiento() {
@@ -93,7 +94,7 @@ public class SpaceInvaders {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param enFuncionamiento
 	 */
 	public void setEnFuncionamiento(boolean enFuncionamiento) {
@@ -101,7 +102,7 @@ public class SpaceInvaders {
 	}
 
 	/**
-	 * 
+	 *
 	 * @return
 	 */
 	public ArrayList<NaveJugador> getJugadores() {
@@ -109,7 +110,7 @@ public class SpaceInvaders {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param jugadores
 	 */
 	public void setJugadores(ArrayList<NaveJugador> jugadores) {
@@ -117,7 +118,7 @@ public class SpaceInvaders {
 	}
 
 	/**
-	 * 
+	 *
 	 * @return
 	 */
 	public Partida getPartidaActual() {
@@ -125,7 +126,7 @@ public class SpaceInvaders {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param partidaActual
 	 */
 	public void setPartidaActual(Partida partidaActual) {
@@ -133,7 +134,7 @@ public class SpaceInvaders {
 	}
 
 	/**
-	 * 
+	 *
 	 * @return
 	 */
 	public NaveJugador getJugadorActual() {
@@ -141,7 +142,7 @@ public class SpaceInvaders {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param jugadorActual
 	 */
 	public void setJugadorActual(NaveJugador jugadorActual) {
@@ -149,7 +150,7 @@ public class SpaceInvaders {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param nombre
 	 * @return
 	 */
@@ -168,7 +169,7 @@ public class SpaceInvaders {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param nombre
 	 * @param directorio
 	 * @throws NicknameYaExisteException
@@ -192,7 +193,7 @@ public class SpaceInvaders {
 
 	/**
 	 * @throws IOException
-	 * 
+	 *
 	 */
 	public void serializarJugador() throws IOException {
 
@@ -213,7 +214,7 @@ public class SpaceInvaders {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param ruta
 	 * @throws IOException
 	 * @throws ClassNotFoundException
@@ -247,28 +248,16 @@ public class SpaceInvaders {
 	}
 
 	@SuppressWarnings("unchecked")
+
 	public ArrayList<NaveJugador> ordenarPorNickname() {
-
 		ArrayList<NaveJugador> jugadoresOrdenados = (ArrayList<NaveJugador>) jugadores.clone();
-
-		if (jugadores != null) {
-			for (int i = 1; i < jugadoresOrdenados.size(); i++) {
-				for (int j = i; j > 0 && jugadoresOrdenados.get(j - 1).getNickname()
-						.compareTo(jugadoresOrdenados.get(j).getNickname()) > 0; j--) {
-					NaveJugador temp = (NaveJugador) jugadoresOrdenados.get(j);
-					jugadoresOrdenados.set(j, jugadoresOrdenados.get(j - 1));
-					jugadoresOrdenados.set(j - 1, temp);
-				}
-			}
-
-		}
-		return jugadoresOrdenados;
-
+		StrategyComparator sortPlayers = new StrategyComparator();
+		return sortPlayers.ordenarPorNickname(jugadoresOrdenados);
 	}
 
-	
+
 	/**
-	 * 
+	 *
 	 */
 	public boolean busquedaRapida(String nickname){
 
@@ -303,7 +292,7 @@ public class SpaceInvaders {
 		if (primerPuntaje == null) {
 			primerPuntaje = puntaje;
 
-		} else {   
+		} else {
 			if (primerPuntaje.getPuntuacion() < puntaje.getPuntuacion()) {
 
 				puntaje.setSiguiente(primerPuntaje);
@@ -350,7 +339,7 @@ public class SpaceInvaders {
 
 	/**
 	 * @throws IOException
-	 * 
+	 *
 	 */
 	public void serializarPuntaje() throws IOException {
 
@@ -367,7 +356,7 @@ public class SpaceInvaders {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param ruta
 	 * @throws IOException
 	 * @throws ClassNotFoundException
