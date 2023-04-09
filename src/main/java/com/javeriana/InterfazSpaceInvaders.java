@@ -24,6 +24,7 @@ import com.javeriana.mundo.NaveJugador;
 import com.javeriana.mundo.Partida;
 import com.javeriana.mundo.SpaceInvaders;
 import com.javeriana.hilos.SpaceInvaderDisposeFacade;
+import com.javeriana.mundo.strategy.StrategyComparator;
 
 public class InterfazSpaceInvaders extends JFrame {
 
@@ -331,10 +332,10 @@ public class InterfazSpaceInvaders extends JFrame {
 	 *
 	 */
 	public void ordenarJugadores() {
-		ArrayList<NaveJugador> jugadores = mundo.ordenarPorNickname();
-		if (jugadores == null)
-			jugadores = new ArrayList<>();
-		panelMenu.getDialogoSeleccionarJugador().cambiarListaJugadores(jugadores);
+		ArrayList<NaveJugador> jugadoresOrdenados = mundo.ordenarPorNickname();
+		if (jugadoresOrdenados == null)
+			jugadoresOrdenados = new ArrayList<>();
+		panelMenu.getDialogoSeleccionarJugador().cambiarListaJugadores(jugadoresOrdenados);
 	}
 
 	/**
