@@ -2,10 +2,13 @@ package com.javeriana.interfaz;
 
 import com.javeriana.InterfazSpaceInvaders;
 
-import java.awt.Color;
-import java.awt.Font;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
+import java.io.File;
+import java.io.IOException;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -70,25 +73,60 @@ public class DialogoCrearJugador extends JDialog implements ActionListener {
 
 		labNombre = new JLabel("NOMBRE DEL JUGADOR");
 		labNombre.setForeground(Color.RED);
-		labNombre.setFont(new Font("ArcadeClassic", Font.PLAIN, 33));
+		labNombre.setFont(new Font("ArcadeClassic", Font.PLAIN, 18));
 		labNombre.setBounds(10, 60, 350, 20);
 
-		txtNombre = new JTextField();
+		txtNombre = new JTextField("Tu Nombre");
 		txtNombre.setBackground(Color.orange);
 		txtNombre.setBounds(10, 85, 205, 25);
 		txtNombre.setForeground(Color.BLUE);
 		txtNombre.setFont(new Font("ArcadeClassic", Font.PLAIN, 25));
 
+		txtNombre.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusGained(FocusEvent e) {
+				if (txtNombre.getText().equals("Tu Nombre")) {
+					txtNombre.setText("");
+					txtNombre.setForeground(Color.BLUE);
+				}
+			}
+
+			@Override
+			public void focusLost(FocusEvent e) {
+				if (txtNombre.getText().equals("")) {
+					txtNombre.setText("Tu Nombre");
+					txtNombre.setForeground(Color.GRAY);
+				}
+			}
+		});
+
 		labNickname = new JLabel("NICKNAME");
 		labNickname.setForeground(Color.red);
-		labNickname.setFont(new Font("ArcadeClassic", Font.PLAIN, 33));
+		labNickname.setFont(new Font("ArcadeClassic", Font.PLAIN, 18));
 		labNickname.setBounds(10, 150, 260, 20);
 
-		txtNickame = new JTextField();
+		txtNickame = new JTextField("Gamersito");
 		txtNickame.setBackground(Color.orange);
 		txtNickame.setBounds(10, 180, 150, 25);
-		txtNickame.setForeground(Color.BLUE);
+		txtNickame.setForeground(Color.GRAY);
 		txtNickame.setFont(new Font("ArcadeClassic", Font.PLAIN, 25));
+		txtNickame.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusGained(FocusEvent e) {
+				if (txtNickame.getText().equals("Gamersito")) {
+					txtNickame.setText("");
+					txtNickame.setForeground(Color.BLUE);
+				}
+			}
+
+			@Override
+			public void focusLost(FocusEvent e) {
+				if (txtNickame.getText().equals("")) {
+					txtNickame.setText("Gamersito");
+					txtNickame.setForeground(Color.GRAY);
+				}
+			}
+		});
 
 		JLabel imagen = new JLabel();
 		ImageIcon icono = new ImageIcon("./data/imagenes/fondAgJ.jpg");
@@ -99,17 +137,21 @@ public class DialogoCrearJugador extends JDialog implements ActionListener {
 		butBotonAceptar.setActionCommand(ACEPTAR);
 		butBotonAceptar.addActionListener(this);
 		butBotonAceptar.setBounds(10, 210, 130, 25);
-		butBotonAceptar.setBackground(Color.BLACK);
+		butBotonAceptar.setBackground(Color.BLUE);
 		butBotonAceptar.setFont(new Font("ArcadeClassic", Font.PLAIN, 20));
-		butBotonAceptar.setForeground(Color.YELLOW);
+		butBotonAceptar.setForeground(Color.WHITE);
+		butBotonAceptar.setBorderPainted(false);
+		butBotonAceptar.setOpaque(true);
 
 		butBotonCancelar = new JButton(CANCELAR);
 		butBotonCancelar.setActionCommand(CANCELAR);
 		butBotonCancelar.addActionListener(this);
 		butBotonCancelar.setBounds(10, 350, 130, 25);
-		butBotonCancelar.setBackground(Color.BLACK);
+		butBotonCancelar.setBackground(Color.ORANGE);
 		butBotonCancelar.setFont(new Font("ArcadeClassic", Font.PLAIN, 20));
-		butBotonCancelar.setForeground(Color.green);
+		butBotonCancelar.setForeground(Color.WHITE);
+		butBotonCancelar.setBorderPainted(false);
+		butBotonCancelar.setOpaque(true);
 
 		auxiliar.setSize(icono.getIconWidth(), icono.getIconHeight());
 		auxiliar.add(labNombre);
