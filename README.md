@@ -12,7 +12,7 @@ A continuación se relacionan los patrones implementados:
 
 ### Patrones Creacionales
  1. Patron Singleton 
- 2. Patron Builder
+ 2. **Patron Builder**: Builder permite construir objetos complejos de forma mas legible
  3. Patron Factory Method: Este patron fue implementado para poder crear enemigos 
 ### Patrones Estructurales
   1. **Facade**: El patron facade (fachada) fue implementado para abstraer la inicialización de todos los hilos del juego.
@@ -25,10 +25,14 @@ A continuación se relacionan los patrones implementados:
   2. **Command**: Space Invader tiene diferentes comandos, el patron comando permite desacoplar estos comandos para que puedan ser invocados desde diferentes componentes (Eventos de teclado, Botones, etc).
 ![command-class.png](src%2Fmain%2Fresources%2Fdiagrams%2Fcommand-class.png)
 ### Patrones de interaccion
-  1. Hover Tools
-  2. Prominent "DONE" Button 
-  3. Input Prompt
-  4. Titled Section
+  1. **Hover Tools**: Mensaje de ayuda que se muestra al momento de pasar el cursor sobre un elemento. Adicional a ello se observa un cambio de cursor sobre el menu al momento de pasar el cursos sobre los elementos.
+![hover-pattern.png](src%2Fmain%2Fresources%2Fdiagrams%2Fhover-pattern.png)
+  2. **Prominent "DONE" Button**: Boton de acción como aceptar, confirmar, procesar que sobre salga por encima de los demas para invitar al usuario a hacer click
+![prominent-button.png](src%2Fmain%2Fresources%2Fdiagrams%2Fprominent-button.png)
+  3. **Input Prompt**: Placeholder que brinda una ayuda visual al usuario para ingresar un texto en un campo tipo input.
+![prominent-button.png](src%2Fmain%2Fresources%2Fdiagrams%2Fprominent-button.png)
+  4. **Titled Section**: Titulo que sobre sale sobre los otros elementos.
+![title-pattern.png](src%2Fmain%2Fresources%2Fdiagrams%2Ftitle-pattern.png)
 
 
 ## Antipatrones
