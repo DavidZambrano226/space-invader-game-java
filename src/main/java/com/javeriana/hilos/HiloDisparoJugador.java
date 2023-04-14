@@ -28,7 +28,11 @@ public class HiloDisparoJugador extends Thread {
 
 		while (navesita.getDisparoUno() != null && !navesita.getDisparoUno().getImpacto()) {
 
-			navesita.getDisparoUno().shoot();
+			if(navesita.getDisparoZic() != null){
+				navesita.getDisparoZic().shoot();
+			} else {
+				navesita.getDisparoUno().shoot();
+			}
 
 			for (int i = 0; i < enemigos.length && navesita.getDisparoUno() != null
 					&& !navesita.getDisparoUno().getImpacto(); i++) {
@@ -57,6 +61,12 @@ public class HiloDisparoJugador extends Thread {
 				if (navesita.getDisparoUno().getPosY() <= 0) {
 					navesita.getDisparoUno().setImpacto(true);
 					navesita.eliminarDisparo();
+				}
+			}
+			if(navesita.getDisparoZic() != null){
+				if (navesita.getDisparoZic().getDisparoGrawp().getPosY() <= 0){
+					navesita.getDisparoZic().getDisparoGrawp().setImpacto(true);
+					navesita.setDisparoZic(null);
 				}
 			}
 		}

@@ -60,6 +60,13 @@ public class Teclado implements KeyListener, IKeyBoard {
 					interfaz.startHiloJugador();
 				}
 			}
+			if(e.getKeyCode() == KeyEvent.VK_D){
+				if(navesita.getDisparoZic() == null){
+					navesita.disparoEspecial(interfaz.darPosActualJugador(),410);
+					interfaz.startHiloJugador();
+				}
+			}
+
 
 			if (e.getKeyCode() == KeyEvent.VK_LEFT) {
 				navesita.mover(-1);
@@ -99,5 +106,7 @@ public class Teclado implements KeyListener, IKeyBoard {
 	public void keyTyped(KeyEvent e) {
 
 	}
+
+
 
 }
