@@ -1,5 +1,6 @@
 package com.javeriana.mundo;
 
+import com.javeriana.decorator.DisparoZic;
 import com.javeriana.excepciones.PartidaYaExisteException;
 
 /**
@@ -221,5 +222,11 @@ public class NaveJugador extends Nave {
 			disparoUno = new Disparo(posX, posY);
 		}
 	}
-
+	public void disparoEspecial(int posX, int posY) {
+		if (disparoZic == null) {
+			cantidadDisparos++;
+			disparoUno = new Disparo(posX, posY);
+			disparoZic = new DisparoZic(disparoUno);
+		}
+	}
 }

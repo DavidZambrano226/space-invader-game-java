@@ -1,8 +1,10 @@
 package com.javeriana.mundo;
 
+import com.javeriana.mundo.interfac.AccionProyectil;
+
 import java.io.Serializable;
 
-public class Disparo implements Serializable {
+public class Disparo implements Serializable , AccionProyectil {
 
 	/**
 	 * 
@@ -47,7 +49,7 @@ public class Disparo implements Serializable {
 	public void setPosY(int posY) {
 		this.posY = posY;
 	}
-
+	@Override
 	public void shoot() {
 		this.posY = this.posY - 1;
 	}

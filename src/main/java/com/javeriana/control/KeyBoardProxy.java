@@ -27,6 +27,7 @@ public class KeyBoardProxy implements KeyListener, IKeyBoard {
         validKeys.add(KeyEvent.VK_ESCAPE);
         validKeys.add(KeyEvent.VK_P);
         validKeys.add(KeyEvent.VK_ENTER);
+        validKeys.add(KeyEvent.VK_D);
 
         if (!validKeys.contains(e.getKeyCode())) {
             System.err.println("The key pressed does not valid key " + e.getKeyChar());
