@@ -1,5 +1,7 @@
 package com.javeriana.mundo;
 
+import com.javeriana.decorator.DisparoDecorador;
+
 import java.io.Serializable;
 
 /**
@@ -17,6 +19,7 @@ public abstract class Nave implements Serializable {
 	 * 
 	 */
 	Disparo disparoUno;
+	DisparoDecorador disparoZic;
 
 	// -----------------------------------------------------------------
 	// ----------------------------Atributos----------------------------
@@ -107,6 +110,11 @@ public abstract class Nave implements Serializable {
 	 */
 	public double getVelocidad() {
 		return this.velocidad;
+	}
+	public void setDisparoZic(DisparoDecorador disparoZic) {
+		this.disparoZic = disparoZic;
+	}public DisparoDecorador getDisparoZic() {
+		return disparoZic;
 	}
 
 	/**
