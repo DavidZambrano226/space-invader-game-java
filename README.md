@@ -1,5 +1,18 @@
 # space-invader-game-java - Proyecto Patrones.
 
+### Tabla de contenido
+<!-- TOC -->
+* [space-invader-game-java - Proyecto Patrones.](#space-invader-game-java---proyecto-patrones)
+  * [Descripción](#descripción)
+  * [Patrones implementados](#patrones-implementados)
+    * [Patrones Creacionales](#patrones-creacionales)
+    * [Patrones Estructurales](#patrones-estructurales)
+    * [Patrones Comportamentales](#patrones-comportamentales)
+    * [Patrones de interaccion](#patrones-de-interaccion)
+  * [Antipatrones](#antipatrones)
+  * [](#)
+<!-- TOC -->
+
 ## Descripción
 
 La finalidad de este proyeto es aplicar patrones de diseño de softwar a un codigo ya existente, 
@@ -39,8 +52,15 @@ A continuación se relacionan los patrones implementados:
 
 En el código original se identificaron los siguientes Antipatrones: 
 
-1. The blob (mancha)
-2. Boat Anchor (Ancla del barco)
-3. Lava Flow (Flujo de lava)
+1. **The blob (mancha)**: 
+   - Clase: **InterfazSpaceInvaders** objeto con muchas responsabilidades, se encarga de la interfaz gráfica de usuario (GUI), la lógica del juego, la gestión de hilos, la serialización de datos, la gestión de eventos de teclado, entre otras cosas.
+![blob-interface-main.png](src%2Fmain%2Fresources%2Fdiagrams%2Fblob-interface-main.png)
+   - Clase: **DialogoMejoresPuntajes** se pueden identificar varias funcionalidades diferentes, como la creación de la interfaz de usuario, la gestión de eventos, la manipulación de datos y la lógica de negocio. Esto puede resultar en una clase sobrecargada y difícil de mantener, ya que todas las funcionalidades están entrelazadas en una sola clase.
+2. **Boat Anchor (Ancla del barco)**: Clase: MonedasInsuficientesException, este objeto no tiene ningún propósito o aporte en la
+   funcionalidad actual del juego.
+![anchor-antipattern.png](src%2Fmain%2Fresources%2Fdiagrams%2Fanchor-antipattern.png)
+3. **Lava Flow (Flujo de lava)**: Se identifica las siguientes líneas de código que no están siendo usadas o se olvidó para que fuera diseñada.
+   Clase: DialogoCrearJugador tiene el método mostrar que no se está usando.
+
 
 ## 
