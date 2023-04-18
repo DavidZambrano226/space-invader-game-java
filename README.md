@@ -24,7 +24,8 @@ a un codigo facil de mantener y de escalar.
 A continuación se relacionan los patrones implementados:
 
 ### Patrones Creacionales
- 1. Patron Singleton 
+ 1. **Patron Singleton**: puede ser beneficioso porque garantiza que solo se renderizará una instancia de cada pantalla en la aplicación, lo que puede mejorar el rendimiento, significa que no es necesario volver a crear la pantalla desde cero cada vez que se solicita, lo que puede ahorrar tiempo de procesamiento y mejorar el rendimiento general de la aplicación.
+ ![Singleton.png](src%2Fmain%2Fresources%2Fdiagrams%2FSingleton.png)
  2. **Patron Builder**: Builder permite construir objetos complejos de forma mas legible
 ![builder.png](src%2Fmain%2Fresources%2Fdiagrams%2Fbuilder.png)
  3. Patron Factory Method: Este patron fue implementado para poder crear enemigos 
@@ -36,7 +37,9 @@ A continuación se relacionan los patrones implementados:
 ![proxy-class.png](src%2Fmain%2Fresources%2Fdiagrams%2Fproxy-class.png)
 
 ### Patrones Comportamentales
-  1. Strategy
+  1. **Strategy**: permite que el usuario pueda cambiar la forma en que se comparan los valores y se ordenan en tiempo de ejecución. Esto significa que si los requisitos cambian, el usuario puede simplemente cambiar el algoritmo de comparación y ordenación en lugar de tener que modificar directamente el código.
+  ![Strategy.png](src%2Fmain%2Fresources%2Fdiagrams%2FStrategy.png)
+  
   2. **Command**: Space Invader tiene diferentes comandos, el patron comando permite desacoplar estos comandos para que puedan ser invocados desde diferentes componentes (Eventos de teclado, Botones, etc).
 ![command-class.png](src%2Fmain%2Fresources%2Fdiagrams%2Fcommand-class.png)
 ### Patrones de interaccion
