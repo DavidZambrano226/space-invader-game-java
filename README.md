@@ -26,6 +26,7 @@ A continuación se relacionan los patrones implementados:
 ### Patrones Creacionales
  1. Patron Singleton 
  2. **Patron Builder**: Builder permite construir objetos complejos de forma mas legible
+![builder.png](src%2Fmain%2Fresources%2Fdiagrams%2Fbuilder.png)
  3. Patron Factory Method: Este patron fue implementado para poder crear enemigos 
  ![DiagrmaFactoryMethod.png](src%2Fmain%2Fresources%2Fdiagrams%2FDiagrmaFactoryMethod.png)
 ### Patrones Estructurales
