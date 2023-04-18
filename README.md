@@ -35,7 +35,8 @@ A continuación se relacionan los patrones implementados:
 ![proxy-class.png](src%2Fmain%2Fresources%2Fdiagrams%2Fproxy-class.png)
 
 ### Patrones Comportamentales
-  1. Strategy
+  1. **Strategy**: puede ser beneficioso porque garantiza que solo se renderizará una instancia de cada pantalla en la aplicación, lo que puede mejorar el rendimiento, significa que no es necesario volver a crear la pantalla desde cero cada vez que se solicita, lo que puede ahorrar tiempo de procesamiento y mejorar el rendimiento general de la aplicación.
+  
   2. **Command**: Space Invader tiene diferentes comandos, el patron comando permite desacoplar estos comandos para que puedan ser invocados desde diferentes componentes (Eventos de teclado, Botones, etc).
 ![command-class.png](src%2Fmain%2Fresources%2Fdiagrams%2Fcommand-class.png)
 ### Patrones de interaccion
